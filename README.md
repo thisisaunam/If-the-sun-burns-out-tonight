@@ -1,4 +1,4 @@
-# if the sun burns out tonight.
+# If the sun burns out tonight.
 
 > *What would you choose to preserve?*
 
