@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>if the sun burns out tonight.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main id="experience">
+
+    <div class="grain"></div>
+    <div class="red-pulse"></div>
+    <div id="star-field"></div>
+
+    <!-- SUN -->
+
+    <div class="sun" id="sun">
+        <div class="sun-glow"></div>
+        <div class="eclipse"></div>
+    </div>
+
+    <!-- MUSIC -->
+
+    <audio
+        id="background-music"
+        preload="auto"
+        playsinline
+    >
+        <source
+            src="./assets/if%20the%20sun%20burns%20out%20tonight%20%28music%29.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+
+    <!-- =====================================================
+         ACT I
+    ====================================================== -->
+
+    <section class="opening" id="opening">
+
+        <div class="opening-content">
+
+            <p class="eyebrow">
+                one night remains
+            </p>
+
+            <h1>
+                if the sun<br>
+                burns out tonight.
+            </h1>
+
+            <p class="opening-subtitle">
+                what would you choose to preserve?
+            </p>
+
+            <button class="primary-button" id="enter">
+                enter the last night
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ACT II
+    ====================================================== -->
+
+    <section class="choice-screen hidden" id="choice-screen">
+
+        <div class="choice-content">
+
+            <p class="eyebrow">
+                act ii · the choice
+            </p>
+
+            <h2>
+                what would you save?
+            </h2>
+
+            <p class="soft-question">
+                there is only enough light for one thing.
+            </p>
+
+            <div class="choices">
+
+                <button class="choice">a voice</button>
+                <button class="choice">my home</button>
+                <button class="choice">someone i love</button>
+                <button class="choice">my pet</button>
+                <button class="choice">a photograph</button>
+                <button class="choice">the smell of rain</button>
+                <button class="choice">something i created</button>
+                <button class="choice">nothing</button>
+
+            </div>
+
+            <button class="custom-choice" id="custom-memory-button">
+                <span>+</span>
+                something only you would choose
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CUSTOM MEMORY
+    ====================================================== -->
+
+    <div class="overlay hidden" id="memory-overlay">
+
+        <div class="memory-modal">
+
+            <p class="eyebrow">
+                no one else gets to choose this
+            </p>
+
+            <h3>
+                what would you preserve?
+            </h3>
+
+            <p class="modal-description">
+                It can be a person, a place, a sound,
+                a moment, or something nobody else would understand.
+            </p>
+
+            <input
+                id="memory-input"
+                type="text"
+                maxlength="100"
+                autocomplete="off"
+                placeholder="write it here..."
+            >
+
+            <div class="modal-buttons">
+
+                <button class="secondary-button" id="memory-cancel">
+                    go back
+                </button>
+
+                <button class="primary-button small" id="memory-continue">
+                    preserve it
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         WHY
+    ====================================================== -->
+
+    <section class="reason-screen hidden" id="reason-screen">
+
+        <div class="reason-content">
+
+            <p class="eyebrow">
+                before the light disappears
+            </p>
+
+            <h2>
+                why this?
+            </h2>
+
+            <p class="soft-question">
+                you don't have to explain it perfectly.
+            </p>
+
+            <textarea
+                id="reason-input"
+                maxlength="240"
+                placeholder="because..."
+            ></textarea>
+
+            <button class="primary-button" id="reason-submit">
+                let it become light
+            </button>
+
+            <p class="skip-text">
+                you can leave this empty.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ACT III
+    ====================================================== -->
+
+    <section class="memory-stage hidden" id="memory-stage">
+
+        <div class="memory-star" id="memory-star"></div>
+
+        <div class="memory-halo" id="memory-halo"></div>
+
+        <div class="star-burst" id="star-burst"></div>
+
+        <div class="memory-display" id="memory-display">
+
+            <p class="memory-display-label">
+                you chose to preserve
+            </p>
+
+            <h3 id="display-memory">
+                a memory
+            </h3>
+
+            <p class="display-reason" id="display-reason"></p>
+
+        </div>
+
+        <div class="reflection" id="reflection">
+
+            <p
+                class="reflection-text"
+                id="reflection-text"
+            ></p>
+
+        </div>
+
+        <div class="continue-hint" id="continue-hint">
+
+            <span></span>
+
+            watch it disappear
+
+        </div>
+
+
+        <!-- SANDGLASS -->
+
+        <div class="sandglass" id="sandglass">
+
+            <div class="glass-top">
+                <span class="sand"></span>
+            </div>
+
+            <div class="glass-neck"></div>
+
+            <div class="glass-bottom">
+                <span class="sand-pile"></span>
+            </div>
+
+        </div>
+
+        <p
+            class="time-running-out"
+            id="time-running-out"
+        >
+            there isn't much time left.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         ACT IV
+    ====================================================== -->
+
+    <section
+        class="collapse-stage hidden"
+        id="collapse-stage"
+    >
+
+        <div
+            class="fracture-memory"
+            id="fracture-memory"
+        ></div>
+
+        <p class="collapse-line">
+            everything ends.
+        </p>
+
+        <p class="collapse-subline">
+            but not everything is lost.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         ACT V
+    ====================================================== -->
+
+    <section
+        class="constellation-stage hidden"
+        id="constellation-stage"
+    >
+
+        <div class="constellation-sky">
+
+            <div
+                class="constellation"
+                id="constellation"
+            ></div>
+
+        </div>
+
+        <div class="constellation-copy">
+
+            <p class="eyebrow">
+                act v · the constellation
+            </p>
+
+            <h2>
+                it didn't disappear.
+            </h2>
+
+            <p id="constellation-reflection"></p>
+
+            <div class="preserved-memory">
+
+                <span>
+                    preserved
+                </span>
+
+                <strong id="constellation-memory">
+                    —
+                </strong>
+
+            </div>
+
+            <button
+                class="primary-button"
+                id="afterlight-enter"
+            >
+                continue into the afterlight
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ACT VI
+    ====================================================== -->
+
+    <section
+        class="afterlight-stage hidden"
+        id="afterlight-stage"
+    >
+
+        <div
+            class="afterlight-stars"
+            id="afterlight-stars"
+        ></div>
+
+        <div class="afterlight-content">
+
+            <p class="eyebrow">
+                act vi · the afterlight
+            </p>
+
+            <h2>
+                what would you<br>
+                leave behind?
+            </h2>
+
+            <p class="afterlight-question">
+                for someone who never knew you.
+            </p>
+
+            <textarea
+                id="legacy-input"
+                maxlength="240"
+                placeholder="a thought, a memory, a sentence..."
+            ></textarea>
+
+            <button
+                class="primary-button"
+                id="legacy-submit"
+            >
+                leave a light
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL
+    ====================================================== -->
+
+    <section
+        class="final-stage hidden"
+        id="final-stage"
+    >
+
+        <div
+            class="final-star"
+            id="final-star"
+        ></div>
+
+        <div class="final-copy">
+
+            <p class="final-main">
+                the light was never the sun.
+            </p>
+
+            <p class="final-second">
+                it was the memories<br>
+                you chose to preserve.
+            </p>
+
+            <p class="final-third">
+                and the things<br>
+                you chose to leave behind.
+            </p>
+
+            <div class="final-divider"></div>
+
+            <p class="final-credit">
+                the viper
+            </p>
+
+            <p class="final-event">
+                hackprix 2026 · wildcardprix
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div id="cursor-glow"></div>
+
+
+<script src="./script2.js"></script>
+
+</body>
+</html>
