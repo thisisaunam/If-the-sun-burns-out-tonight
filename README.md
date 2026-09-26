@@ -1,6 +1,8 @@
-# If the sun burns out tonight.
+# if the sun burns out tonight.
 
 > *What would you choose to preserve?*
+>
+> ✦
 
 A small interactive experience about endings, memory, and the things we decide are worth carrying with us.
 
@@ -14,7 +16,7 @@ And then you watch what happens to it.
 
 ---
 
-## The Idea
+## ◌ The Idea
 
 **If the Sun Burns Out Tonight** is an interactive story built around one simple question:
 
@@ -34,7 +36,7 @@ It's meant to be experienced slowly.
 
 ---
 
-## The Six Acts
+## ✦ The Six Acts
 
 ### Ⅰ — The Dying Light
 
@@ -78,7 +80,7 @@ It's about what you want someone else to find.
 
 ---
 
-## Why I Made This
+## ☾ Why I Made This
 
 We spend a lot of time trying to preserve things.
 
@@ -101,7 +103,7 @@ Just a few minutes in the dark.
 
 ---
 
-## The Experience
+## ◇ The Experience
 
 The visual language starts almost entirely in darkness, with the dying sun carrying warmer tones.
 
@@ -115,9 +117,13 @@ It becomes **different**.
 
 The constellation is also generated from the memory the user chooses, so the final sky feels connected to the beginning of their journey.
 
+✧ The experience is intentionally slow.
+✧ The transitions are part of the story.
+✧ The darkness is part of the interface.
+
 ---
 
-## Built With
+## ⟡ Built With
 
 `HTML` · `CSS` · `JavaScript`
 
@@ -129,7 +135,7 @@ Just a browser, animation, a little bit of randomness, and a lot of atmosphere.
 
 ---
 
-## Running It Locally
+## ⋆ Running It Locally
 
 Clone the repository:
 
@@ -151,12 +157,12 @@ Keep the project structure intact, especially the `assets` folder containing the
 If-the-sun-burns-out-tonight/
 ├── index.html
 ├── style.css
-├── script2.js
+└── script2.js
 ```
 
 ---
 
-## Made For
+## ♢ Made For
 
 **HackPrix 2026 · WildcardPrix**
 
@@ -167,4 +173,8 @@ If-the-sun-burns-out-tonight/
 <p align="center">
   <i>When the sun burns out,<br>
   what will you choose to leave glowing?</i>
+</p>
+
+<p align="center">
+  ⋆ · · · ✦ · · · ⋆
 </p>
